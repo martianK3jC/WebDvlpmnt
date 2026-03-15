@@ -1,35 +1,140 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <title>My Projects</title>
-    </head>
-    <body>
-        <section>
-            <h1>My Projects</h1>
-        </section>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work &amp; Wins — Kesha's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Slackey&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
 
-        <p>This is the projects page of my personal website.</p>
-        <p>Here you can find a list of some of the projects I have worked on, along with brief descriptions and links to view them.</p>
-        
-        
-        <nav>
-            <ul>
-                <li><a href="https://github.com/martianK3jC/Pig-game.git">Project 1: Pig Game</a></li>
-                <li><a href="project2.html">Project 2: To-Do List App</a></li>
-                <li><a href="project3.html">Project 3: Weather App</a></li>
-            </ul>
-        </nav>
-        
-        
-        <p>Feel free to click on the links to learn more about each project and see the code and live demos.</p>
-        <p><a href="index.html">Go back to Home Page</a></p>
-    
-    
-    </body>
-    <footer>
-        <p>&copy; 2024 Kesha Jane Ceniza. All rights reserved.</p>
-    </footer>
-</html>    
+<body>
+  <!-- NAVIGATION -->
+  <nav class="main-nav">
+    <a href="index.html#home" class="nav-link">HOME</a>
+    <a href="index.html#about-section" class="nav-link">ABOUT</a>
+    <a href="index.html#skills-section" class="nav-link">SKILLS</a>
+    <a href="index.html#projects-section" class="nav-link">WORK &amp; WINS</a>
+    <a href="index.html#contact-section" class="nav-link">CONTACT</a>
+  </nav>
+
+  <section id="projects" class="projects-section">
+
+    <!-- ===== PROJECT 1: PIG GAME ===== -->
+    <div class="project-entry">
+
+      <!-- Left: Layered frame with screenshot -->
+      <div class="project-frame-wrapper">
+        <!-- Layer 4: outermost (dark navy) -->
+        <img src="./image/projectImages/piGame/4thLayer.svg" alt="" class="frame-layer layer-4" />
+        <!-- Layer 3: red -->
+        <img src="./image/projectImages/piGame/3rdLayer.svg" alt="" class="frame-layer layer-3" />
+        <!-- Layer 2: orange -->
+        <img src="./image/projectImages/piGame/2ndLayer.svg" alt="" class="frame-layer layer-2" />
+        <!-- Layer 1: yellow innermost ring -->
+        <img src="./image/projectImages/piGame/1stLayer.svg" alt="" class="frame-layer layer-1" />
+        <!-- Pig illustration (contains pig background + game screenshot) -->
+        <img src="./image/projectImages/piGame/pigImage.svg" alt="Pig Game screenshot" class="frame-layer layer-pig" />
+      </div>
+
+      <!-- Right: Project info -->
+      <div class="project-info">
+        <h2 class="project-title">PIG GAME</h2>
+        <p class="project-desc">
+          A simple browser-based dice game where two players compete to reach
+          the winning score by rolling the dice and deciding when to hold their
+          points. Built with JavaScript to demonstrate turn-based gameplay,
+          score tracking, and dynamic UI updates.
+        </p>
+        <div class="project-tags">
+          <span class="tag">JAVASCRIPT</span>
+          <span class="tag">CSS</span>
+          <span class="tag">HTML</span>
+        </div>
+        <div class="project-links">
+          <a href="https://martiank3jc.github.io/Pig-game/" target="_blank" class="btn-outline">
+            LIVE DEMO <span class="btn-icon">↗</span>
+          </a>
+          <a href="https://github.com/martianK3jC/Pig-game.git" target="_blank" class="btn-outline">
+            VIEW GITHUB <span class="btn-icon">⌥</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PROJECT 2: IMAGE PROCESSING APP ===== -->
+    <div class="project-entry">
+
+      <div class="project-frame-wrapper">
+        <img src="./image/projectImages/ImageProcessingApp/4thLayer.svg" alt="" class="frame-layer layer-4" />
+        <img src="./image/projectImages/ImageProcessingApp/3rdLayer.svg" alt="" class="frame-layer layer-3" />
+        <img src="./image/projectImages/ImageProcessingApp/2ndLayer.svg" alt="" class="frame-layer layer-2" />
+        <img src="./image/projectImages/ImageProcessingApp/1stLayer.svg" alt="" class="frame-layer layer-1" />
+        <img src="./image/projectImages/ImageProcessingApp/Rectangle 31.svg" alt="" class="frame-layer layer-rect" />
+        <img src="./image/projectImages/ImageProcessingApp/image 2.svg" alt="Image Processing App screenshot"
+          class="frame-layer layer-screenshot" />
+      </div>
+
+      <div class="project-info">
+        <h2 class="project-title">IMAGE<br />PROCESSING<br />APP</h2>
+        <p class="project-desc">
+          A C# Windows Forms application that applies real-time image filters
+          and processing techniques including grayscale, sepia, edge detection
+          (Sobel, Prewitt, Kirsch), Gaussian blur, emboss, and green screen
+          processing.
+        </p>
+        <div class="project-tags">
+          <span class="tag">C#</span>
+          <span class="tag">.NET</span>
+          <span class="tag">Windows Forms</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/martianK3jC/ImageProcessingActivity.git" target="_blank" class="btn-outline">
+            VIEW GITHUB <span class="btn-icon">⌥</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ACHIEVEMENT: TOP 10 FINALISTS ===== -->
+    <div class="project-entry">
+
+      <div class="project-frame-wrapper">
+        <img src="./image/projectImages/top10/4thLayer.svg" alt="" class="frame-layer layer-4" />
+        <img src="./image/projectImages/top10/3rdLayer.svg" alt="" class="frame-layer layer-3" />
+        <img src="./image/projectImages/top10/2ndLayer.svg" alt="" class="frame-layer layer-2" />
+        <img src="./image/projectImages/top10/1stLayer.svg" alt="" class="frame-layer layer-1" />
+        <img src="./image/projectImages/top10/Rectangle 31.svg" alt="" class="frame-layer layer-rect" />
+        <img src="./image/projectImages/top10/image 3.svg" alt="Top 10 Finalists CEB-i Hacks"
+          class="frame-layer layer-screenshot" />
+      </div>
+
+      <div class="project-info">
+        <h2 class="project-title">TOP 10<br />FINALISTS</h2>
+        <p class="project-desc">
+          Competed in CEB-i Hacks, Cebu's first AI-powered innovation
+          challenge by MCIA. Advanced from Top 25 to Top 10, presenting our
+          AI-driven operations solution at Demo Day in front of industry
+          leaders.
+        </p>
+        <div class="project-tags">
+          <span class="tag">TOP 10</span>
+          <span class="tag">AI</span>
+          <span class="tag">HACKATHON</span>
+          <span class="tag">2025</span>
+        </div>
+        <div class="project-links">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7422240518614716416/?originTrackingId=DlRim%2BU9uuNk%2F%2FZSOhZyag%3D%3D"
+            target="_blank" class="btn-outline">
+            VIEW POST <span class="btn-icon">in</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+
+</html>

@@ -1,26 +1,69 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <title>About Me</title>
-    </head>
-    <body>
-        <h1>About Me</h1>
-        <p>My background is green</p>
-        <p>Education: Cebu Institute of Technology - University</p>
-        <p>My hobbies have something to do with creating an output.</p>
-        <ul>
-            <li>Origami</li>
-            <li>Watching animes</li>
-            <li>Reading books</li>
-            <li>Playing Clash of Clans</li>
-            <li>Embroidery</li>
-            <li>Painting</li>
-            <li>Drawing</li>
-            <li>Doom Scrolling</li>
-            <li>Duolingo</li>
-        </ul>
-        <p><a href="index.html">Go back to Home Page</a></p>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me — Kesha's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+      <a href="index.html#home" class="nav-link">HOME</a>
+      <a href="index.html#about-section" class="nav-link">ABOUT</a>
+      <a href="index.html#skills-section" class="nav-link">SKILLS</a>
+      <a href="index.html#projects-section" class="nav-link">WORK & WINS</a>
+      <a href="index.html#contact-section" class="nav-link">CONTACT</a>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+
+        <!-- LEFT: Layered blob photo frame -->
+        <div class="about-photo-wrapper">
+          <div class="blob-layer blob-layer-1"></div>
+          <div class="blob-layer blob-layer-2"></div>
+          <div class="blob-layer blob-layer-3"></div>
+          <div class="blob-photo">
+            <img src="./image/catto.avif" alt="Kesha Jane Ceniza" />
+          </div>
+        </div>
+
+        <!-- RIGHT: Text content -->
+        <div class="about-text">
+          <h1 class="about-heading">ABOUT ME</h1>
+
+          <p>
+            I'm <span class="highlight">Kesha Jane L. Ceniza</span>, a 2nd year Computer Science student
+            at <span class="highlight">Cebu Institute of Technology - University</span>. Jack of all trades,
+            and proud of it.
+          </p>
+
+          <p>
+            My roots are in the arts: origami, embroidery, paper crafts, sewing. That creativity
+            carries over into how I build things in tech, pulling me toward
+            <strong class="highlight">full-stack development</strong> and building experiences that
+            are as beautiful as they are functional. With AI in the mix, what I can build feels
+            <strong class="highlight">limitless.</strong>
+          </p>
+
+          <p>
+            Outside of screens, I learn ukulele and guitar, read manhwa and books, and loop songs
+            on repeat for days. I'm a <strong class="highlight">maximalist</strong> at heart. The
+            best work has <strong class="highlight">personality</strong> in it.
+          </p>
+
+          <p class="about-location">
+            <span class="location-icon">📍</span> Lapu-lapu City
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </body>
 </html>

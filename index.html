@@ -1,22 +1,52 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <title>My Web Page</title>
-    </head>
-    <body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kesha's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
 
-        <h1>Hi! I'm Kesha</h1>
-        <img src="./image/Me.svg" alt="A picture of Kesha" class="profile-pic" id="home_pic">
-        <p>I'm a computer science student and an aspiring fullstack web developer.</p>
-        <ul>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-        
-        <img src="./image/cityScapes.svg" alt="City Scapes" class="city-scapes">
-        <img src="./image/cityScapes.svg" alt="City Scapes" class="city-scapes">
-    </body>
-</html> 
+    <!-- FIXED NAVIGATION -->
+    <nav class="main-nav">
+      <a href="#home" class="nav-link">HOME</a>
+      <a href="#about-section" class="nav-link">ABOUT</a>
+      <a href="#skills-section" class="nav-link">SKILLS</a>
+      <a href="#projects-section" class="nav-link">WORK & WINS</a>
+      <a href="#contact-section" class="nav-link">CONTACT</a>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home">
+      <!-- Background -->
+      <img src="./image/cityScapes.svg" class="bg-svg" alt="background" />
+
+      <!-- Character -->
+      <img src="./image/Me.svg" class="character" alt="Kesha character" />
+
+      <!-- Hero Title -->
+      <div class="hero-title">
+        <h1>HI! I'M<br />KESHA</h1>
+      </div>
+
+      <!-- Subtitle -->
+      <p class="subtitle">
+        - A Computer Science student who loves to build, create, and make things
+        come to life.
+      </p>
+    </section>
+
+    <!-- THESE SECTIONS WILL BE POPULATED BY SCRIPT.JS -->
+    <section id="about-section" class="content-section"></section>
+    <section id="skills-section" class="content-section"></section>
+    <section id="projects-section" class="content-section"></section>
+    <section id="contact-section" class="content-section"></section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

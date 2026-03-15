@@ -1,20 +1,71 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Contact Me</title>
-</head>
-<body>
-    <h1>Contact Me</h1>
-    <p>This is the contact page of my personal website.</p>
-    <p>This contains contact info and simple contact form</p>
-    <ul>
-        <li>Email: <a href="mailto:duckeshaquack2x@duck.com">duckeshaquack2x@duck.com</a></li>
-        <li>Phone: (+63) 908 123 4567</li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/kesha-jane-ceniza-88923b38b/" target="_blank">Your LinkedIn Profile</a></li>
-        <li>GitHub: <a href="https://github.com/martianK3jC" target="_blank">MartianK3jC</a></li>
-    </ul>
-    <p>I look forward to hearing from you!</p>
-    <a href="index.html">Go back to Home Page</a>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Kesha's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+      <a href="index.html#home" class="nav-link">HOME</a>
+      <a href="index.html#about-section" class="nav-link">ABOUT</a>
+      <a href="index.html#skills-section" class="nav-link">SKILLS</a>
+      <a href="index.html#projects-section" class="nav-link">WORK & WINS</a>
+      <a href="index.html#contact-section" class="nav-link">CONTACT</a>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+
+      <!-- Left: Text content -->
+      <div class="contact-content">
+
+        <h1 class="contact-heading">
+          LET US <span class="contact-highlight">CONNECT</span>
+        </h1>
+
+        <p class="contact-subtext">
+          Got a project in mind, an opportunity to share, or just want to say hi?
+          My inbox is always open.
+        </p>
+
+        <!-- Contact info list -->
+        <ul class="contact-list">
+
+          <li class="contact-item">
+            <img src="./image/contactImage/map-pin.svg" alt="Location" class="contact-icon" />
+            <span>Lapu-lapu City</span>
+          </li>
+
+          <li class="contact-item">
+            <img src="./image/contactImage/envelope.svg" alt="Email" class="contact-icon" />
+            <a href="mailto:keshajane24@gmail.com">keshajane24@gmail.com</a>
+          </li>
+
+          <li class="contact-item">
+            <img src="./image/contactImage/Vector.svg" alt="LinkedIn" class="contact-icon" />
+            <a href="https://www.linkedin.com/in/kesha-jane-ceniza-88923b38b/" target="_blank">Kesha Jane Ceniza</a>
+          </li>
+
+          <li class="contact-item">
+            <img src="./image/contactImage/github-original 1.svg" alt="GitHub" class="contact-icon" />
+            <a href="https://github.com/martianK3jC" target="_blank">martianK3jC</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Right: Character illustration -->
+      <div class="contact-character-wrapper">
+        <img src="./image/Me.svg" alt="Kesha character" class="contact-character" />
+      </div>
+
+    </section>
+  </body>
 </html>
