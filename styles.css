@@ -37,10 +37,16 @@ html {
   left: 0;
   width: 100%;
   z-index: 100;
+
   display: flex;
+  justify-content: center;
+  /* center the nav items */
   align-items: center;
-  gap: 50px;
+  gap: clamp(18px, 4vw, 40px);
+  /* responsive spacing */
+
   padding: 20px 40px;
+
   background-color: rgba(22, 24, 23, 0.92);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
