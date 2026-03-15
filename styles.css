@@ -16,7 +16,6 @@ html {
   height: 100vh;
   overflow: hidden;
   padding-top: 72px;
-  /* offset for fixed navbar */
 }
 
 /* Background */
@@ -40,24 +39,21 @@ html {
 
   display: flex;
   justify-content: center;
-  /* center the nav items */
   align-items: center;
   gap: clamp(18px, 4vw, 40px);
-  /* responsive spacing */
 
   padding: 20px 40px;
 
-  background-color: rgba(22, 24, 23, 0.92);
+  background-color: rgba(33, 34, 39, 0.92);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-link {
   font-family: "Slackey", cursive;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   padding-bottom: 4px;
   border-bottom: 3px solid transparent;
@@ -66,12 +62,10 @@ html {
     border-bottom-color 0.3s ease;
 }
 
-/* Hover — orange */
 .nav-link:hover {
   color: #f65936;
 }
 
-/* Active/clicked — yellow text + orange underline */
 .nav-link.active {
   color: #fdb137;
   border-bottom: 3px solid #f65936;
@@ -83,65 +77,98 @@ html {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 90vh;
+  height: 80vh;
   z-index: 2;
   object-fit: contain;
+  margin-left: 5%;
 }
 
 /* Hero Title */
 .hero-title {
   position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-40%);
+  top: 15%;
+  right: 10%;
   z-index: 2;
-}
-
-h1 {
   font-family: "Slackey", cursive;
-  font-size: clamp(4rem, 12vw, 9rem);
+  font-size: 4.5rem;
+  line-height: 1;
   color: #ffa500;
-  text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
-  line-height: 1.05;
-  text-align: left;
+  text-shadow: 6px 6px 5px rgba(0, 0, 0, 1);
 }
 
 /* Subtitle */
 .subtitle {
   position: absolute;
   bottom: 24px;
-  left: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
   z-index: 3;
   font-family: "Nunito", sans-serif;
   font-style: italic;
   font-weight: 700;
-  font-size: clamp(0.85rem, 2vw, 1.1rem);
-  color: #ffa500;
+  font-size: 2rem;
+  color: #f65936;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
 }
 
 /* ===== HOME RESPONSIVE ===== */
+
+@media (max-width: 960px) {
+  .main-nav {
+    gap: 20px;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+  }
+
+  .character {
+    height: 65vh;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    line-height: 1;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 1);
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .main-nav {
     gap: 20px;
     padding: 14px 20px;
     flex-wrap: wrap;
-    font-size: 0.85rem;
   }
 
   .character {
-    height: 70vh;
-    opacity: 0.6;
+    height: 65vh;
   }
 
-  h1 {
-    font-size: clamp(3rem, 15vw, 5rem);
-    right: 3%;
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 1);
+    text-align: left;
   }
 
   .subtitle {
     font-size: 0.8rem;
-    left: 20px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
   }
 }
 
@@ -153,6 +180,25 @@ h1 {
 
   .character {
     height: 60vh;
+  }
+
+  .nav-link {
+    font-size: 0.492rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    top: 25%;
+    left: 50%;
+    right: auto;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
   }
 }
 
@@ -275,6 +321,26 @@ h1 {
   font-size: 1.2rem;
 }
 
+/* --- About list --- */
+.about-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 0;
+}
+
+.about-list li::before {
+  content: "▸ ";
+  color: #fdb137;
+}
+
+.about-list li {
+  font-family: "Nunito", sans-serif;
+  color: #e0ddd8;
+  font-size: 1rem;
+}
+
 /* --- About responsive --- */
 @media (max-width: 900px) {
   .about-container {
@@ -349,7 +415,6 @@ h1 {
   cursor: default;
 }
 
-/* SVG icons already contain the full badge design */
 .skill-icon {
   width: 110px;
   height: 110px;
@@ -434,11 +499,9 @@ h1 {
   position: relative;
   flex-shrink: 0;
   width: min(55vw, 660px);
-  /* SVG aspect ratio ~1193:689 */
   aspect-ratio: 1193 / 689;
 }
 
-/* All frame layers are centered and absolutely positioned */
 .frame-layer {
   position: absolute;
   top: 50%;
@@ -485,7 +548,7 @@ h1 {
 }
 
 .layer-screenshot {
-  transform: translate(-33%, -50.5%) scale(0.70);
+  transform: translate(-33%, -50.5%) scale(0.7);
   z-index: 0;
   object-fit: fill;
   border-radius: 4px;
@@ -567,13 +630,12 @@ h1 {
   color: #161817;
 }
 
-/* SVG icon inside button */
 .btn-svg-icon {
   width: 18px;
   height: 18px;
   object-fit: contain;
-  /* Invert to match button color, overridden on hover via filter */
-  filter: invert(44%) sepia(80%) saturate(700%) hue-rotate(340deg) brightness(100%);
+  filter: invert(44%) sepia(80%) saturate(700%) hue-rotate(340deg)
+    brightness(100%);
   transition: filter 0.25s ease;
   flex-shrink: 0;
 }
@@ -630,6 +692,23 @@ h1 {
 }
 
 /* ===== CONTACT SECTION ===== */
+
+.bg-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 72px;
+}
+.bg-contact-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 .contact-section {
   background-color: #212227;
   width: 100%;
@@ -646,18 +725,20 @@ h1 {
 .contact-content {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
   max-width: 480px;
   z-index: 2;
+  position: relative;
+  margin-bottom: 10%;
+  height: 100%;
 }
 
 .contact-heading {
   font-family: "Slackey", cursive;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: 6rem;
   color: #ffffff;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
   line-height: 1.1;
-  letter-spacing: 2px;
 }
 
 .contact-highlight {
@@ -666,10 +747,10 @@ h1 {
 
 .contact-subtext {
   font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #d8d5d0;
   line-height: 1.75;
-  max-width: 380px;
+  max-width: 480px;
 }
 
 /* --- Contact list --- */
@@ -708,17 +789,100 @@ h1 {
   color: #fdb137;
 }
 
-/* --- Right character --- */
-.contact-character-wrapper {
-  flex-shrink: 0;
-  align-self: flex-end;
-  z-index: 1;
+/* --- Contact form --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-.contact-character {
-  height: 85vh;
-  object-fit: contain;
-  display: block;
+.form-group {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.form-input,
+.form-area {
+  font-family: "Nunito", sans-serif;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  color: #ffffff;
+  outline: none;
+  width: 100%;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-area::placeholder {
+  color: #a09d98;
+}
+
+.form-input:focus,
+.form-area:focus {
+  border-color: #fdb137;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.form-area {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  font-family: "Slackey", cursive;
+  background-color: transparent;
+  color: #f65936;
+  border: 2px solid #f65936;
+  padding: 14px 24px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+  border-radius: 4px;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.form-submit:hover {
+  background-color: #f65936;
+  color: #161817;
+  transform: translateY(-2px);
+}
+
+/* --- Contact Form Wrapper --- */
+.contact-form-wrapper {
+  flex-shrink: 0;
+  width: min(45vw, 440px);
+  z-index: 2;
+  position: relative;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  width: 100%;
+  background-color: #0d0f0e;
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.site-footer p {
+  font-family: "Nunito", sans-serif;
+  color: #7b7873;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 /* --- Contact responsive --- */
@@ -726,30 +890,67 @@ h1 {
   .contact-section {
     flex-direction: column;
     align-items: flex-start;
-    padding: 70px 40px 0 40px;
-    min-height: auto;
-    gap: 40px;
+    justify-content: flex-start;
+    padding: 100px 40px 0 40px;
+    min-height: 100vh;
+    position: relative;
   }
 
-  .contact-character-wrapper {
-    align-self: center;
+  .contact-content {
+    margin-bottom: 0;
+    z-index: 2;
+    max-width: 100%;
+  }
+
+  .contact-form-wrapper {
     width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .contact-character {
-    height: 55vh;
-  }
-}
-
-@media (max-width: 540px) {
-  .contact-section {
-    padding: 60px 24px 0 24px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .contact-heading {
-    font-size: 2.2rem;
+    font-size: 4.5rem;
+  }
+
+  .contact-character-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-self: flex-end;
+    z-index: 1;
+  }
+
+  .contact-character {
+    height: 65vh;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 90px 30px 0 30px;
+  }
+
+  .contact-heading {
+    font-size: 3.5rem;
+  }
+
+  .contact-character {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 590px) {
+  .contact-section {
+    padding: 80px 24px 0 24px;
+  }
+
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+
+  .contact-subtext {
+    font-size: 1rem;
   }
 
   .contact-icon {
@@ -757,8 +958,27 @@ h1 {
     height: 28px;
   }
 
+  .contact-character {
+    height: 50vh;
+  }
+
   .contact-item span,
   .contact-item a {
     font-size: 0.95rem;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-heading {
+    font-size: 2rem;
+  }
+
+  .contact-character {
+    height: 25vh;
   }
 }

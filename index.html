@@ -1,53 +1,57 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kesha's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kesha's Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Slackey&family=Nunito:wght@400;600;700;800&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+      <a href="#home" class="nav-link">HOME</a>
+      <a href="#about-section" class="nav-link">ABOUT</a>
+      <a href="#skills-section" class="nav-link">SKILLS</a>
+      <a href="#projects-section" class="nav-link">WORK & WINS</a>
+      <a href="#contact-section" class="nav-link">CONTACT</a>
+    </nav>
 
-<body>
+    <!-- HOME SECTION -->
+    <section id="home">
+      <!-- BACKGROUND IMAGE -->
+      <img src="./image/cityScapes.svg" class="bg-svg" alt="background" />
 
-  <!-- FIXED NAVIGATION -->
-  <nav class="main-nav">
-    <a href="#home" class="nav-link">HOME</a>
-    <a href="#about-section" class="nav-link">ABOUT</a>
-    <a href="#skills-section" class="nav-link">SKILLS</a>
-    <a href="#projects-section" class="nav-link">WORK & WINS</a>
-    <a href="#contact-section" class="nav-link">CONTACT</a>
-  </nav>
+      <!-- CHARACTER IMAGE -->
+      <img src="./image/Me.svg" class="character" alt="Kesha character" />
 
-  <!-- HOME SECTION -->
-  <section id="home">
-    <!-- Background -->
-    <img src="./image/cityScapes.svg" class="bg-svg" alt="background" />
+      <!-- HERO TITLE -->
+      <div class="hero-title">
+        <h1>HI! I'M <br />KESHA</h1>
+      </div>
 
-    <!-- Character -->
-    <img src="./image/Me.svg" class="character" alt="Kesha character" />
+      <!-- SUBTITLE -->
+      <p class="subtitle">
+        - A Computer Science student who loves to build, create, and make things
+        come to life.
+      </p>
+    </section>
 
-    <!-- Hero Title -->
-    <div class="hero-title">
-      <h1>HI! I'M<br />KESHA</h1>
-    </div>
+    <!-- DYNAMIC SECTIONS -->
+    <section id="about-section" class="content-section"></section>
+    <section id="skills-section" class="content-section"></section>
+    <section id="projects-section" class="content-section"></section>
+    <section id="contact-section" class="content-section"></section>
 
-    <!-- Subtitle -->
-    <p class="subtitle">
-      - A Computer Science student who loves to build, create, and make things
-      come to life.
-    </p>
-  </section>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>&copy; 2026 Kesha Jane Ceniza. All rights reserved.</p>
+    </footer>
 
-  <!-- THESE SECTIONS WILL BE POPULATED BY SCRIPT.JS -->
-  <section id="about-section" class="content-section"></section>
-  <section id="skills-section" class="content-section"></section>
-  <section id="projects-section" class="content-section"></section>
-  <section id="contact-section" class="content-section"></section>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
