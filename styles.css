@@ -400,32 +400,35 @@ h1 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 0;
-  padding: 80px 60px;
+  padding: 0;
 }
 
-/* --- Each project row --- */
+/* --- Each project fills one full viewport --- */
 .project-entry {
   display: flex;
   align-items: center;
-  gap: 60px;
-  max-width: 1100px;
+  justify-content: center;
+  gap: 40px;
   width: 100%;
-  padding: 60px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  min-height: 100vh;
+  padding: 100px 60px 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  position: relative;
 }
 
 .project-entry:last-child {
   border-bottom: none;
 }
 
-/* --- Layered SVG frame wrapper --- */
+/* --- Layered SVG frame wrapper — large, dominant --- */
 .project-frame-wrapper {
   position: relative;
   flex-shrink: 0;
-  width: 480px;
-  /* Height is auto based on SVG aspect ratio ~1193:689 ≈ 1.73:1 */
+  width: min(55vw, 660px);
+  /* SVG aspect ratio ~1193:689 */
   aspect-ratio: 1193 / 689;
 }
 
@@ -440,57 +443,52 @@ h1 {
   transform-origin: left;
 }
 
-/* === STACKING ILLUSION: each layer scales down toward center === */
+/* === STACKING ILLUSION === */
 
-/* Layer 4 — outermost (dark navy), full size, lowest z-index */
 .layer-4 {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-51%, -50%) scale(1.02);
   z-index: 4;
-  filter: drop-shadow(-10px 0px 8px rgba(0, 0, 0, 0.7));
 }
 
-/* Layer 3 — navy blue, slightly smaller */
 .layer-3 {
-  transform: translate(-45.5%, -55%) scale(0.82);
+  transform: translate(-50%, -50%) scale(1);
   z-index: 3;
-  filter: drop-shadow(0px 6px 8px rgba(0, 0, 0, 0.7));
 }
 
-/* Layer 2 — orange, smaller still */
 .layer-2 {
-  transform: translate(-45.5%, -55%) scale(0.81);
+  transform: translate(-50%, -50%) scale(1);
   z-index: 2;
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.6));
 }
 
-/* Layer 1 — yellow (innermost ring), smallest */
 .layer-1 {
-  transform: translate(-45.5%, -55%) scale(0.81);
+  transform: translate(-50%, -50%) scale(1);
   z-index: 1;
-  filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.5));
 }
 
-/* Pig / background pattern image — sits inside layer-1 */
 .layer-pig {
-  transform: translate(-43%, -55%) scale(0.50);
+  transform: translate(-38%, -49%) scale(0.75);
   z-index: 0;
   object-fit: cover;
-  /* border-radius: 30% 30% 28% 28% / 22% 22% 20% 20%; */
 }
 
-/* Rectangle / dark card background — on top of pig pattern */
 .layer-rect {
-  transform: translate(-50%, -50%) scale(0.42);
-  z-index: -1;
+  transform: translate(-38%, -50%) scale(0.75);
+  z-index: 0;
   object-fit: fill;
   border-radius: 6px;
 }
 
-/* Screenshot — sits on top of the rect card */
 .layer-screenshot {
-  transform: translate(-50%, -50%) scale(0.40);
+  transform: translate(-33%, -50.5%) scale(0.70);
   z-index: 0;
-  object-fit: cover;
+  object-fit: fill;
+  border-radius: 4px;
+}
+
+.layer-screenshot1 {
+  transform: translate(-50%, -50%) scale(1.001);
+  z-index: 0;
+  object-fit: fill;
   border-radius: 4px;
 }
 
@@ -498,37 +496,38 @@ h1 {
 .project-info {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   flex: 1;
+  max-width: 440px;
 }
 
 .project-title {
   font-family: "Slackey", cursive;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   color: #fdb137;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: 1px;
 }
 
 .project-desc {
   font-family: "Nunito", sans-serif;
-  font-size: 0.97rem;
+  font-size: 1rem;
   color: #d8d5d0;
-  line-height: 1.75;
+  line-height: 1.78;
 }
 
 /* --- Tech tags --- */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   margin-top: 4px;
 }
 
 .tag {
   font-family: "Slackey", cursive;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: #f65936;
   letter-spacing: 1px;
 }
@@ -538,18 +537,18 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: "Slackey", cursive;
   font-size: 0.78rem;
   color: #f65936;
   border: 2px solid #f65936;
-  padding: 10px 18px;
+  padding: 11px 20px;
   text-decoration: none;
   letter-spacing: 1.5px;
   transition:
@@ -562,27 +561,39 @@ h1 {
   color: #161817;
 }
 
-.btn-icon {
-  font-size: 1rem;
+/* SVG icon inside button */
+.btn-svg-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  /* Invert to match button color, overridden on hover via filter */
+  filter: invert(44%) sepia(80%) saturate(700%) hue-rotate(340deg) brightness(100%);
+  transition: filter 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-outline:hover .btn-svg-icon {
+  filter: invert(10%) sepia(10%) saturate(200%) hue-rotate(0deg) brightness(30%);
 }
 
 /* --- Projects responsive --- */
 @media (max-width: 960px) {
   .project-entry {
     flex-direction: column;
-    gap: 40px;
-    padding: 50px 0;
+    gap: 50px;
+    padding: 120px 40px 80px;
+    min-height: 100vh;
+    justify-content: center;
   }
 
   .project-frame-wrapper {
-    width: 100%;
-    padding-left: 50px;
-    max-width: 520px;
+    width: min(90vw, 560px);
   }
 
   .project-info {
     text-align: center;
     align-items: center;
+    max-width: 560px;
   }
 
   .project-tags {
@@ -595,16 +606,20 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  .projects-section {
-    padding: 60px 24px;
+  .project-entry {
+    padding: 110px 24px 70px;
   }
 
   .project-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .project-desc {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
+  }
+
+  .project-frame-wrapper {
+    width: 92vw;
   }
 }
 
